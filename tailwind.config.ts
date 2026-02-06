@@ -47,11 +47,12 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
-  			gradient: {
-  				purple: 'hsl(var(--gradient-purple))',
-  				blue: 'hsl(var(--gradient-blue))',
-  				cyan: 'hsl(var(--gradient-cyan))'
-  			}
+			warm: {
+				brown: 'hsl(var(--warm-brown))',
+				beige: 'hsl(var(--warm-beige))',
+				cream: 'hsl(var(--warm-cream))',
+				taupe: 'hsl(var(--warm-taupe))'
+			}
   		},
   		fontFamily: {
   			sans: [
@@ -185,12 +186,9 @@ export default {
   			shimmer: 'shimmer 3s linear infinite',
   			orbit: 'orbit 20s linear infinite'
   		},
-  		backgroundImage: {
-  			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-  			'gradient-primary': 'linear-gradient(135deg, hsl(var(--gradient-purple)), hsl(var(--gradient-blue)))',
-  			'gradient-secondary': 'linear-gradient(135deg, hsl(var(--gradient-blue)), hsl(var(--gradient-cyan)))',
-  			'gradient-dark': 'linear-gradient(180deg, hsl(var(--background)), hsl(222 47% 4%))'
-  		},
+		backgroundImage: {
+			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+		},
   		boxShadow: {
   			'2xs': 'var(--shadow-2xs)',
   			xs: 'var(--shadow-xs)',

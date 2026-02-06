@@ -1,47 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Sparkles, CheckCircle2 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Subtle Background Pattern */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt="Abstract 3D background"
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-      </div>
-
-      {/* Animated Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-blue))] opacity-20 blur-3xl"
-          animate={{
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-blue))] to-[hsl(var(--gradient-cyan))] opacity-15 blur-3xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, -40, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--warm-beige)/0.4),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--warm-cream)/0.5),transparent_50%)]" />
       </div>
 
       {/* Content */}
@@ -52,9 +19,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card mb-8"
           >
-            <Sparkles className="w-4 h-4 text-[hsl(var(--gradient-purple))]" />
+            <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground">
               Now accepting new projects for 2024
             </span>
@@ -65,10 +32,12 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-foreground"
           >
             Transform Your Vision Into a{" "}
-            <span className="gradient-text">Stunning Digital Experience</span>
+            <span className="underline decoration-[hsl(var(--warm-brown))] decoration-4 underline-offset-8">
+              Stunning Digital Experience
+            </span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -107,17 +76,17 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-6 text-muted-foreground"
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[hsl(var(--gradient-cyan))]" />
+              <CheckCircle2 className="w-5 h-5 text-foreground" />
               <span className="text-sm">Trusted by 500+ businesses</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[hsl(var(--gradient-cyan))]" />
+              <CheckCircle2 className="w-5 h-5 text-foreground" />
               <span className="text-sm">98% client satisfaction</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[hsl(var(--gradient-cyan))]" />
+              <CheckCircle2 className="w-5 h-5 text-foreground" />
               <span className="text-sm">Award-winning designs</span>
             </div>
           </motion.div>

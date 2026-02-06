@@ -60,11 +60,11 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-sm font-medium text-[hsl(var(--gradient-blue))] uppercase tracking-widest mb-4 block">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4 block">
             Pricing
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Transparent <span className="gradient-text">Pricing</span>
+            Transparent <span className="underline decoration-[hsl(var(--warm-brown))] decoration-2 underline-offset-4">Pricing</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             No hidden fees. Choose the plan that fits your needs.
@@ -85,7 +85,7 @@ const Pricing = () => {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-blue))] text-primary-foreground text-sm font-medium shadow-lg">
+                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-foreground text-background text-sm font-medium shadow-lg">
                     <Star className="w-4 h-4 fill-current" />
                     Most Popular
                   </div>
@@ -93,10 +93,10 @@ const Pricing = () => {
               )}
 
               <div
-                className={`glass-card rounded-2xl p-8 h-full flex flex-col ${
+                className={`glass-card rounded-2xl p-8 h-full flex flex-col transition-all duration-300 ${
                   plan.popular
-                    ? "border-[hsl(var(--gradient-purple))]/50 bg-gradient-to-b from-[hsl(var(--gradient-purple))]/5 to-transparent"
-                    : ""
+                    ? "border-foreground/30 bg-secondary/50"
+                    : "hover:border-foreground/20"
                 }`}
               >
                 {/* Plan Header */}
@@ -119,8 +119,8 @@ const Pricing = () => {
                 <ul className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-[hsl(var(--gradient-purple))]/20 flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3 h-3 text-[hsl(var(--gradient-purple))]" />
+                      <div className="w-5 h-5 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-foreground" />
                       </div>
                       <span className="text-muted-foreground">{feature}</span>
                     </li>

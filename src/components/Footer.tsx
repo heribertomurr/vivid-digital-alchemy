@@ -31,7 +31,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/50 bg-secondary/20">
+    <footer className="border-t border-border bg-card/50">
       <div className="container-wide section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Column */}
@@ -43,8 +43,8 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-blue))] flex items-center justify-center">
-                  <span className="text-xl font-bold text-primary-foreground">W</span>
+                <div className="w-10 h-10 rounded-xl bg-foreground flex items-center justify-center">
+                  <span className="text-xl font-bold text-background">W</span>
                 </div>
                 <span className="text-xl font-bold">WebStudio</span>
               </div>
@@ -139,7 +139,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} WebStudio. All rights reserved.
           </p>
@@ -151,7 +151,7 @@ const Footer = () => {
                 key={index}
                 href={social.href}
                 aria-label={social.label}
-                className="w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-foreground hover:text-background transition-all"
               >
                 <social.icon className="w-5 h-5" />
               </a>
