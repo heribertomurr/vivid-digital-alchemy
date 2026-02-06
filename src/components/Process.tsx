@@ -34,7 +34,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="process" className="section-padding bg-secondary/20">
+    <section id="process" className="section-padding bg-card/50">
       <div className="container-wide">
         {/* Section Header */}
         <motion.div
@@ -44,11 +44,11 @@ const Process = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-sm font-medium text-[hsl(var(--gradient-blue))] uppercase tracking-widest mb-4 block">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4 block">
             Our Process
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            How It <span className="gradient-text">Works</span>
+            How It <span className="underline decoration-[hsl(var(--warm-brown))] decoration-2 underline-offset-4">Works</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             A proven process that delivers exceptional results, every time.
@@ -58,7 +58,7 @@ const Process = () => {
         {/* Process Timeline */}
         <div className="relative">
           {/* Connecting Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
@@ -70,15 +70,15 @@ const Process = () => {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="relative"
               >
-                <div className="glass-card rounded-2xl p-8 text-center h-full group hover:bg-card/80 transition-all duration-300">
+                <div className="glass-card rounded-2xl p-8 text-center h-full group hover:border-foreground/20 transition-all duration-300">
                   {/* Step Number */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-blue))] flex items-center justify-center text-sm font-bold text-primary-foreground shadow-lg shadow-[hsl(var(--gradient-purple))]/30">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center text-sm font-bold">
                     {index + 1}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-muted/50 flex items-center justify-center mx-auto mb-6 mt-4 group-hover:bg-[hsl(var(--gradient-purple))]/10 transition-colors">
-                    <step.icon className="w-8 h-8 text-[hsl(var(--gradient-purple))]" />
+                  <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center mx-auto mb-6 mt-4 group-hover:bg-foreground group-hover:text-background transition-colors">
+                    <step.icon className="w-8 h-8" />
                   </div>
 
                   {/* Content */}

@@ -38,7 +38,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="section-padding bg-secondary/20">
+    <section id="features" className="section-padding bg-card/50">
       <div className="container-wide">
         {/* Section Header */}
         <motion.div
@@ -48,11 +48,11 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-sm font-medium text-[hsl(var(--gradient-purple))] uppercase tracking-widest mb-4 block">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4 block">
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Built for <span className="gradient-text">Performance</span>
+            Built for <span className="underline decoration-[hsl(var(--warm-brown))] decoration-2 underline-offset-4">Performance</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Every website we build is engineered for speed, accessibility, and growth.
@@ -70,18 +70,18 @@ const Features = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div
-                className={`glass-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 ${
+                className={`glass-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 md:gap-10 hover:border-foreground/20 transition-all duration-300 ${
                   index % 2 === 1 ? "md:flex-row-reverse" : ""
                 }`}
               >
                 {/* Icon & Metric */}
                 <div className="flex-shrink-0 w-full md:w-auto">
                   <div className="flex items-center gap-6">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[hsl(var(--gradient-purple))]/20 to-[hsl(var(--gradient-blue))]/20 flex items-center justify-center">
-                      <feature.icon className="w-8 h-8 text-[hsl(var(--gradient-purple))]" />
+                    <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center">
+                      <feature.icon className="w-8 h-8 text-foreground" />
                     </div>
                     <div className="md:hidden">
-                      <div className="text-3xl font-bold gradient-text">
+                      <div className="text-3xl font-bold text-foreground">
                         {feature.metric}
                       </div>
                       <div className="text-sm text-muted-foreground">
@@ -101,7 +101,7 @@ const Features = () => {
 
                 {/* Metric (Desktop) */}
                 <div className="hidden md:block flex-shrink-0 text-right">
-                  <div className="text-4xl font-bold gradient-text">
+                  <div className="text-4xl font-bold text-foreground">
                     {feature.metric}
                   </div>
                   <div className="text-sm text-muted-foreground">

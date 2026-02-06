@@ -72,11 +72,11 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-sm font-medium text-[hsl(var(--gradient-purple))] uppercase tracking-widest mb-4 block">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4 block">
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            What We <span className="gradient-text">Build</span>
+            What We <span className="underline decoration-[hsl(var(--warm-brown))] decoration-2 underline-offset-4">Build</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             From stunning landing pages to complex web applications, we craft digital
@@ -98,24 +98,19 @@ const Services = () => {
               variants={itemVariants}
               className="group relative"
             >
-              <div className="glass-card rounded-2xl p-8 h-full shine-effect transition-all duration-500 hover:bg-card/80 hover:border-[hsl(var(--gradient-purple))]/30">
+              <div className="glass-card rounded-2xl p-8 h-full shine-effect transition-all duration-300 hover:border-foreground/20">
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[hsl(var(--gradient-purple))]/20 to-[hsl(var(--gradient-blue))]/20 flex items-center justify-center mb-6 group-hover:from-[hsl(var(--gradient-purple))]/30 group-hover:to-[hsl(var(--gradient-blue))]/30 transition-all duration-300">
-                  <service.icon className="w-7 h-7 text-[hsl(var(--gradient-purple))]" />
+                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                  <service.icon className="w-7 h-7" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-[hsl(var(--gradient-purple))] transition-colors">
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-foreground transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* Hover Gradient Border */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[hsl(var(--gradient-purple))]/10 to-[hsl(var(--gradient-blue))]/10" />
-                </div>
               </div>
             </motion.div>
           ))}

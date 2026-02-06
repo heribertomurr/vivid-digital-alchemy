@@ -15,7 +15,7 @@ const logos = [
 
 const LogoStrip = () => {
   return (
-    <section className="py-16 md:py-20 border-y border-border/50 bg-secondary/30">
+    <section className="py-16 md:py-20 border-y border-border bg-card/50">
       <div className="container-wide">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -40,8 +40,8 @@ const LogoStrip = () => {
                 key={index}
                 className="flex-shrink-0 mx-8 md:mx-12"
               >
-                <div className="flex items-center gap-3 group cursor-pointer transition-all duration-300 hover:opacity-100 opacity-60">
-                  <div className="w-10 h-10 rounded-lg bg-muted/50 border border-border/50 flex items-center justify-center group-hover:border-[hsl(var(--gradient-purple))]/50 transition-colors">
+                <div className="flex items-center gap-3 group cursor-pointer transition-all duration-300 hover:opacity-100 opacity-50">
+                  <div className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center group-hover:border-foreground/30 transition-colors">
                     <span className="text-sm font-bold text-foreground/70 group-hover:text-foreground transition-colors">
                       {logo.initials}
                     </span>

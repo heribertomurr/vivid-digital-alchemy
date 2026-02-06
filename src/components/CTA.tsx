@@ -5,34 +5,8 @@ import { ArrowRight, Calendar } from "lucide-react";
 const CTA = () => {
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[hsl(var(--gradient-purple))]/5 to-[hsl(var(--gradient-blue))]/10" />
-      
-      {/* Animated Orbs */}
-      <motion.div
-        className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-[hsl(var(--gradient-purple))] opacity-10 blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-[hsl(var(--gradient-blue))] opacity-10 blur-3xl"
-        animate={{
-          scale: [1, 1.1, 1],
-          x: [0, -30, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-secondary/30" />
 
       <div className="container-narrow relative z-10">
         <motion.div
@@ -44,7 +18,7 @@ const CTA = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Ready to Build Something{" "}
-            <span className="gradient-text">Amazing?</span>
+            <span className="underline decoration-[hsl(var(--warm-brown))] decoration-4 underline-offset-8">Amazing?</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Let's bring your vision to life. Get a free consultation and discover
